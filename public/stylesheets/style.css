@@ -1,0 +1,21 @@
+body {
+  background-image: url("sable.jpg");
+}
+
+h1 {
+    color:black;
+    font-family:courier;
+    text-align:center;
+
+}
+
+h4 {
+  color: green;
+  text-align: center;
+}
+
+h4 {
+  text-align: left;
+  font-size: 14px;
+  font-size: 104%;
+}
