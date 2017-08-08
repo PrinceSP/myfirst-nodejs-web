@@ -17,5 +17,10 @@ router.get('/contact',function(req, res, next) {
 router.get('/news',function(req, res, next) {
   res.render('page_news.html', {title: 'NEWS'});
 });
-
+router.get('/article', function(req, res, next) {
+  res.render('page_article.html', {title: 'ARTICLE'});
+})
+router.post('/send-message', function(req, res, next) {
+  res.json({message:req.body.comment});
+})
 module.exports = router;
