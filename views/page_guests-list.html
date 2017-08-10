@@ -1,0 +1,44 @@
+<%include includes/header.html%>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<header>
+		<div class="header-content">
+				<div class="header-content-inner">
+						<h1><p style="font-size:50px">Contact</h1>
+				</div>
+		</div>
+</header>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Comment</th>
+  </tr>
+  <%allGuests.forEach(function(row,index){%>
+    <tr>
+      <td><%=row.name%></td>
+      <td><%=row.mail%></td>
+      <td><%=row.message%></td>
+    </tr>
+  <%})%>
+
+</table>
+
+<%include includes/footer.html%>

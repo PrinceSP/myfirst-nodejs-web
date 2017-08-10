@@ -3,7 +3,7 @@ if(process.env.NODE_ENV=='production'){
       mongodb:{
           'host':'localhost',
           'port':'27017',
-          'database':'',
+          'database':'blog',
           'username':'',
           'password':''
       }
@@ -13,7 +13,7 @@ if(process.env.NODE_ENV=='production'){
       mongodb:{
           'host':'localhost',
           'port':'27017',
-          'database':'',
+          'database':'blog',
           'username':'',
           'password':''
       }
@@ -23,7 +23,7 @@ if(process.env.NODE_ENV=='production'){
       mongodb:{
           'host':'localhost',
           'port':'27017',
-          'database':'',
+          'database':'blog',
           'username':'',
           'password':''
       }

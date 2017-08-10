@@ -1,36 +1,37 @@
 <%include includes/header.html%>
 
-		<footer class="page-footer">
-        <div class="contact">
-        	<div class="container">
-				<h2 class="section-heading">Contact Us</h2>
-        	</div>
-        </div>
+<style>
+	.bordered {
+		width: 500px;
+		height: 370px;
+		padding: 19px;
+		border: 8px inset powderblue;
+			}
+</style>
 
-    </footer>
 
-		<style>
-			.bordered {
-				width: 500px;
-				height: 368px;
-				padding: 19px;
-				border: 8px inset yellowgreen;
-					}
-		</style>
-
-				<div class="bordered">
-							<form action="/send-message" method="post">
-									Name:<br>
-									<input type="text" name="name"><br>
-									E-mail:<br>
-									<input type="text" name="mail"><br>
-									Comment:<br>
-									<input type="text" name="comment" size="50"><br><br>
-									<input type="submit" value="Send" >
-									<input type="reset" value="Reset" > <br><br>
-									<p><span class="glyphicon glyphicon-earphone"></span><br> (+62)812-1350-7373</p>
-									<p><span class="glyphicon glyphicon-envelope"></span><br><a href="http://www.rayasem.co.id" target="_blank"> info@example.com</p>
-								</form>
+<header>
+		<div class="header-content">
+				<div class="header-content-inner">
+						<h1><p style="font-size:50px">Contact</h1>
 				</div>
+		</div>
+</header>
+
+		<div class="bordered">
+					<form action="/send-message" method="post">
+							Name:<br>
+							<input type="text" name="name"><br>
+							E-mail:<br>
+							<input type="text" name="mail"><br>
+							Comment:<br>
+							<input type="text" name="comment" size="50"><br><br>
+							<input type="submit" value="Send" >
+							<input type="reset" value="Reset" > <br><br>
+							<p><span class="glyphicon glyphicon-earphone"></span><br> (+62)812-1350-7373</p>
+							<p><span class="glyphicon glyphicon-envelope"></span><br><a href="http://www.rayasem.co.id" target="_blank"> info@example.com</p>
+						</form>
+		</div>
+
 
 <%include includes/footer.html%>

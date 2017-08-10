@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var model_guests = require('../models/guests');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -20,7 +21,30 @@ router.get('/news',function(req, res, next) {
 router.get('/article', function(req, res, next) {
   res.render('page_article.html', {title: 'ARTICLE'});
 })
+router.get('/guests-list', function(req, res, next) {
+  model_guests.fetchdata(function(err,allGuests) {
+
+      console.log(err);
+      res.render('page_guests-list.html', {allGuests:allGuests, title: 'GUESTS LIST'});
+  });
+
+});
+
+
 router.post('/send-message', function(req, res, next) {
-  res.json({message:req.body.comment});
-})
+var guestData = {
+  name:req.body.name,
+  mail:req.body.mail,
+  message:req.body.comment
+}
+model_guests.createdata(guestData,function(status,err) {
+  console.log(err);
+  res.json({
+    status:status,
+    name:req.body.name,
+    mail:req.body.mail,
+    message:req.body.comment});
+  })
+});
+
 module.exports = router;
