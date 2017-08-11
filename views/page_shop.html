@@ -1,5 +1,5 @@
 <%include includes/header.html%>
-  <link href="css/guestlistheader.css" rel="stylesheet">
+  <link href="css/shopheader.css" rel="stylesheet">
 <style>
 table {
   font-family: arial, sans-serif;
@@ -17,28 +17,28 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 </style>
-
 <header>
 		<div class="header-content">
 				<div class="header-content-inner">
-						<h1><p style="font-size:50px">Guests List</h1>
+          <h1><p style="font-size:60px">SALE</h1>
+          <p style="font-size:30px">UP TO 70% OFF</P>
+    <a class="btn btn-primary btn-lg" href="http://www.amazon.in/">
+      Shop now
+      <br>
+    </a>
 				</div>
 		</div>
 </header>
 <table>
   <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Comment</th>
+    <th>Nama barang</th>
+    <th>Jumlah barang</th>
+    <th>Harga</th>
   </tr>
-  <%allGuests.forEach(function(row,index){%>
-    <tr>
-      <td><%=row.name%></td>
-      <td><%=row.mail%></td>
-      <td><%=row.message%></td>
-    </tr>
-  <%})%>
-
-</table>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 
 <%include includes/footer.html%>

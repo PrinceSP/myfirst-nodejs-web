@@ -29,6 +29,9 @@ router.get('/guests-list', function(req, res, next) {
   });
 
 });
+router.get('/shop', function(req, res, next) {
+  res.render('page_shop.html', {title: 'SHOP'})
+});
 
 
 router.post('/send-message', function(req, res, next) {
