@@ -1,44 +1,41 @@
 <%include includes/header.html%>
   <link href="css/shopheader.css" rel="stylesheet">
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+.bordered {
+  width: 500px;
+  height: 370px;
+  padding: 19px;
+  border: 8px inset powderblue;
+    }
 </style>
 <header>
 		<div class="header-content">
 				<div class="header-content-inner">
-          <h1><p style="font-size:60px">SALE</h1>
+          <h1><p style="font-size:75px">SALE</h1>
           <p style="font-size:30px">UP TO 70% OFF</P>
-    <a class="btn btn-primary btn-lg" href="http://www.amazon.in/">
+    <a class="btn btn-primary btn-lg" href="/requested-item">
       Shop now
       <br>
     </a>
-				</div>
-		</div>
+  </a>
 </header>
-<table>
-  <tr>
-    <th>Nama barang</th>
-    <th>Jumlah barang</th>
-    <th>Harga</th>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
+
+<div class="bordered">
+      <form action="/send-item" method="post" enctype="multipart/form-data">
+          Item:<br>
+          <input type="text" name="item"><br>
+          Picture:<br>
+          <input type="file" name="picture" id="fileToUpload"><br>
+          <input type="submit" value="Upload Image" name="submit">
+          Ammount:<br>
+          <input type="text" name="ammount"><br>
+          Price:<br>
+          <input type="text" name="price" size="50"><br><br>
+          <input type="submit" value="Send" >
+          <input type="reset" value="Reset" > <br><br>
+          <p><span class="glyphicon glyphicon-earphone"></span><br> (+62)812-1350-7373</p>
+          <p><span class="glyphicon glyphicon-envelope"></span><br><a href="http://www.rayasem.co.id" target="_blank"> info@example.com</p>
+        </form>
+</div>
 
 <%include includes/footer.html%>

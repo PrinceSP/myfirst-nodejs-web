@@ -1,0 +1,44 @@
+<%include includes/header.html%>
+  <link href="css/shopheader.css" rel="stylesheet">
+<style>
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+</style>
+<header>
+		<div class="header-content">
+				<div class="header-content-inner">
+						<h1><p style="font-size:50px">SALE</h1>
+              <p style="font-size:30px">UP TO 70% OFF</P>
+				</div>
+		</div>
+</header>
+  <table>
+    <tr>
+      <th>Item</th>
+      <th>Ammount</th>
+      <th>Price</th>
+    </tr>
+    <%allItems.forEach(function(row,index){%>
+      <tr>
+        <td><%=row.item%></td>
+        <td><%=row.ammount%></td>
+        <td><%=row.price%></td>
+      </tr>
+    <%})%>
+
+  </table>
+
+<%include includes/footer.html%>
